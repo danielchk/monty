@@ -1,6 +1,8 @@
 #ifndef MONTY_H
 #define MONTY_H
 
+extern int ext;
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -37,7 +39,6 @@ typedef struct instruction_s
         void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
-extern int ext;
 
 void pusher(stack_t **first, unsigned int line_number);
 void un_used(stack_t **first, unsigned int line_number);
