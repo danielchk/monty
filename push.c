@@ -1,6 +1,6 @@
 #include "monty.h"
 
-int ext;
+int num;
 /**
  * pusher - stack a new element
  * @stack: line

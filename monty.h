@@ -1,7 +1,7 @@
 #ifndef MONTY_H
 #define MONTY_H
 
-extern int ext;
+extern int num;
 
 #include <stdio.h>
 #include <stdlib.h>
