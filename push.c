@@ -1,8 +1,8 @@
 #include "monty.h"
 int ext;
 /**
- * pusher - stack a new element
- * @first: stack
+ * pusher - first a new element
+ * @first: first
  * @line_number: line number zero
  */
 
@@ -29,4 +29,23 @@ void pusher(stack_t **first, unsigned int line_number)
 	else
 		trip->next = NULL;
 	*first = trip;
+}
+
+/**
+ * paller - print in order from last pushed.
+ * @first: first
+ * @line_number: line number zero
+ */
+
+void paller(stack_t **first, unsigned int line_number)
+{
+	stack_t *node = *first;
+
+	UNUSED(line_number);
+
+	while (node != NULL)
+	{
+		printf("%d\n", node->n);
+		node = node->next;
+	}
 }
