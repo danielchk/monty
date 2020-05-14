@@ -8,10 +8,10 @@ int ext;
 
 void pusher(stack_t **first, unsigned int line_number)
 {
-	stack_t *top;
+	stack_t *trip;
 	(void)line_number;
-	top = malloc(sizeof(stack_t));
-	if (top == NULL)
+	trip = malloc(sizeof(stack_t));
+	if (trip == NULL)
 	{
 		printf("Error: malloc failed\n");
 		free_list(first);
@@ -19,14 +19,14 @@ void pusher(stack_t **first, unsigned int line_number)
 		exit(EXIT_FAILURE);
 	}
 
-	top->n = num;
-	top->prev = NULL;
+	trip->n = num;
+	trip->prev = NULL;
 	if (*first != NULL)
 	{
-		(*first)->prev = top;
-		top->next = *first;
+		(*first)->prev = trip;
+		trip->next = *first;
 	}
 	else
-		top->next = NULL;
-	*first = top;
+		trip->next = NULL;
+	*first = trip;
 }

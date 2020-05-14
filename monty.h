@@ -40,6 +40,7 @@ typedef struct instruction_s
 extern int ext;
 
 void pusher(stack_t **first, unsigned int line_number);
+void un_used(stack_t **first, unsigned int line_number);
 
 
 #endif
