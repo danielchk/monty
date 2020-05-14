@@ -42,6 +42,6 @@ typedef struct instruction_s
 
 void pusher(stack_t **first, unsigned int line_number);
 void un_used(stack_t **first, unsigned int line_number);
-
+void paller(stack_t **first, unsigned int line_number);
 
 #endif
