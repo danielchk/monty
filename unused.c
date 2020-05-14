@@ -1,11 +1,11 @@
 /**
  * un_used - signals
- * @first: first
+ * @stack: line
  * @line_number: line number zero
  */
 
-void un_used(stack_t **first, unsigned int line_number)
+void un_used(stack_t **stack, unsigned int line_number)
 {
-	UNUSED(first);
+	UNUSED(stack);
 	UNUSED(line_number);
 }

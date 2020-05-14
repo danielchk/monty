@@ -1,12 +1,12 @@
 #include "monty.h"
 int ext;
 /**
- * pusher - first a new element
- * @first: first
+ * pusher - stack a new element
+ * @stack: line
  * @line_number: line number zero
  */
 
-void pusher(stack_t **first, unsigned int line_number)
+void pusher(stack_t **stack, unsigned int line_number)
 {
 	stack_t *trip;
 	(void)line_number;
@@ -14,32 +14,32 @@ void pusher(stack_t **first, unsigned int line_number)
 	if (trip == NULL)
 	{
 		printf("Error: malloc failed\n");
-		free_list(first);
-		free(first);
+		free_list(stack);
+		free(stack);
 		exit(EXIT_FAILURE);
 	}
 
 	trip->n = num;
 	trip->prev = NULL;
-	if (*first != NULL)
+	if (*stack != NULL)
 	{
-		(*first)->prev = trip;
-		trip->next = *first;
+		(*stack)->prev = trip;
+		trip->next = *stack;
 	}
 	else
 		trip->next = NULL;
-	*first = trip;
+	*stack = trip;
 }
 
 /**
  * paller - print in order from last pushed.
- * @first: first
+ * @stack: stack
  * @line_number: line number zero
  */
 
-void paller(stack_t **first, unsigned int line_number)
+void paller(stack_t **stack, unsigned int line_number)
 {
-	stack_t *node = *first;
+	stack_t *node = *stack;
 
 	UNUSED(line_number);
 
