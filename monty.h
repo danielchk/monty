@@ -43,5 +43,9 @@ typedef struct instruction_s
 void pusher(stack_t **stack, unsigned int line_number);
 void un_used(stack_t **stack, unsigned int line_number);
 void paller(stack_t **stack, unsigned int line_number);
+void stack_it(char *file);
+char *read_file(char *file);
+void find_op(stack_t **stack, int lines, char *token);
+void free_list(stack_t **stack);
 
 #endif

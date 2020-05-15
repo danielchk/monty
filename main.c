@@ -12,6 +12,6 @@ int main(int argc, char **argv)
 		printf("USAGE: monty file\n");
 		exit(EXIT_FAILURE);
     }
-	stack_it(argv[1]);
+	lkdlist(argv[1]);
 	return (0);
 }
